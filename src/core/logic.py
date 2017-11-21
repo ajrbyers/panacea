@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.contrib import messages
 
-from core import models
 
 def find_orcid_user(orcid_id):
 	try:
