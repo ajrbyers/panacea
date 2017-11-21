@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+*.sqlite3
+
+src/core/dev_settings\.py
