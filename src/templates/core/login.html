@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% load bootstrap4 %}
-
 {% block title %}Login{% endblock %}
 
 {% block content %}
@@ -12,7 +10,7 @@
 		<p>Hello, {{ request.user.first_name }}, you are already logged in.</p>
 		<a href="{% url 'logout' %}?next={% url 'login' %}" class="btn btn-danger btn-block">Logout</a>
 		{% else %}
-		<p>Login for this service is handled via ORCiD. If you do not have an ORCiD you will be able to crate one after you click the login link below.</p>
+		<p>Login for this service is handled via ORCiD. If you do not have an ORCiD you will be able to create one after you click the login link below.</p>
 		<a href="{{ orcid_url }}?client_id={{ orcid_client_id }}&response_type=code&scope=/authenticate&redirect_uri={{ request.base_url }}/login/orcid/" class="btn btn-primary btn-block">Login with ORCiD</a>
 		{% endif %}
 	</div>

@@ -1,3 +1,13 @@
+from journal import models as journal_models
+
+
+def get_journal():
+    journals = journal_models.Journal.objects.all()
+
+    if journals:
+        return journals[0]
+    else:
+        return None
 
 class SiteSettingsMiddleware(object):
     @staticmethod
@@ -9,3 +19,5 @@ class SiteSettingsMiddleware(object):
         """
         request.port = request.META['SERVER_PORT']
         request.base_url = 'http{0}://{1}'.format('s' if request.is_secure() else '', request.get_host())
+        request.journal = get_journal()
+

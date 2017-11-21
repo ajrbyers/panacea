@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from journal import models
+
+admin_list = [
+    (models.Article,),
+    (models.License,),
+    (models.Version,),
+]
+
+[admin.site.register(*t) for t in admin_list]

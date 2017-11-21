@@ -105,3 +105,5 @@ ENV/
 src/core/dev_settings\.py
 
 src/core/settings\.py
+src/collected-static/**
+src/media/**
