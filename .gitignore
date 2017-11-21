@@ -103,3 +103,5 @@ ENV/
 *.sqlite3
 
 src/core/dev_settings\.py
+
+src/core/settings\.py
