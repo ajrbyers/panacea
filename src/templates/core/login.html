@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row marketing">
+    <div class="col-lg-6 offset-lg-3">
+		<h2>Login to Panacea</h2>
+		<p>Login for this service is handled via ORCiD. If you do not have an ORCiD you will be able to crate one after you click the login link below.</p>
+		<a href="{{ orcid_url }}?client_id={{ orcid_client_id }}&response_type=code&scope=/authenticate&redirect_uri=http://{{ request.get_host }}/login/orcid/" class="btn btn-primary btn-block">Login with ORCiD</a>
+	</div>
+</div>
+{% endblock %}

@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'core',
     'journal',
     'review',
     'moderator',
+
+    'bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# ORCiD Details
+ORCID_API_URL = 'http://pub.orcid.org/v1.2_rc7/'
+ORCID_URL = 'https://orcid.org/oauth/authorize'
+ORCID_TOKEN_URL = 'https://pub.orcid.org/oauth/token'
+ORCID_CLIENT_SECRET = ''
+ORCID_CLIENT_ID = ''
+
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}

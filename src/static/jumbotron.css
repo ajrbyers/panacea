@@ -1,0 +1,13 @@
+.jumbotron {
+background-image: url("./img/books.jpg");
+background-size: cover;
+color: white;
+font-weight: bold !important;}
+
+.lead  {
+	font-weight: bold;
+}
+
+.display-3 {
+	font-weight: bold;
+}
